@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="" ?>
+
+<ruleset name="MonFramwerk">
+
+<description> Mes gègles de formattage </discription>
+<arg name="colors"/>
+<arg value="p"/>
+
+<file>src</file>
+<rule ref="PSR2"></rule>
+</ruleset> 
