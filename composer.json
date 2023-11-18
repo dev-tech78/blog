@@ -2,7 +2,9 @@
     "name": "karim/mon-fremework",
     "autoload": {
         "psr-4": {
-            "Framework\\": "src/Framework"
+            "Framework\\": "src/Framework",
+            "App\\": "src",
+            "Tests\\":"tests"
         }
     },
     "authors": [
@@ -17,7 +19,9 @@
     },
     "require": {
         "guzzlehttp/psr7": "^2.6",
-        "http-interop/response-sender": "^1.0"
+        "http-interop/response-sender": "^1.0",
+        "mezzio/mezzio-fastroute": "^3.11",
+        "psr/http-server-middleware": "^1.0"
     }
     
 }

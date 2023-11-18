@@ -11,7 +11,7 @@ class AppTest extends TestCase
 {
  public function testRedirecTrailingSlah()
  {
-    $app = new App();
+    $app = new App([]);
     $request = new ServerRequest('GET', '/demoslash/');
     $response = $app->run($request);
     $this->assertContains('/demoslash', $response->getHeader('Location'));

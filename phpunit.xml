@@ -1,0 +1,9 @@
+<phpunit bootstrap="./vandor/autoloader.php">
+
+<testsuites>
+<testsuite name="Framework">
+<diredtory>tests</diredtory>
+</testsuite>
+</testsuites>
+
+</phpunit>
