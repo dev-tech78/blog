@@ -4,9 +4,9 @@ namespace Framework;
 
 use Framework\Router\Route;
 use Mezzio\Router\FastRouteRouter;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Mezzio\Router\Route as ZendRoute;
 
+use Mezzio\Router\Route as ZendRoute;
+use Psr\Http\Message\ServerRequestInterface;
 
 /**
  * Register and match routes
@@ -22,6 +22,8 @@ class Router
     * @var [fasteRouter]
     */
     private $router;
+
+
     public function __construct()
     {
        $this->router = new FastRouteRouter();
@@ -32,7 +34,7 @@ class Router
      * Undocumented function
      *
      * @param string $path
-     * @param callable $callable
+     * @param $callable
      * @param string $name
      * @return void
      */
@@ -43,11 +45,10 @@ class Router
 
 
     /**
-     * @param ServervRequestInterFace  $request
      * @return Route/null
      */
     
-    public function match(Request $request): ? Route
+    public function match(ServerRequestInterface $request): ? Route
 
     {
         $result = $this->router->match($request);
