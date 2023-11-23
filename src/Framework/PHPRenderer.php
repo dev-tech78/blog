@@ -1,21 +1,34 @@
 <?php
- namespace Framework;
+ namespace Framework\Renderer;
 
+use Framework\Renderer\RendererInterface;
 use PHPUnit\Framework\TestCase;
 
- class Renderer
+ class PHPRenderer implements RendererInterface
 
  {
    
-   private $paths = [];
+   
 
    const DEFAULT_NAMESPACE = '__MAIN';
+
+   private $paths = [];
     /**
      * varibles globalements accessibles pour toutes les vues 
      *
      * @var array
      */
    private $globals = [];
+
+
+   public function __construct( ? string $defaultPath =null)
+   {
+    
+    if(!is_null($defaultPath)){
+        $this->addPath($defaultPath);
+    }
+   
+   }
    
       /**
      * Permet de rajouter un chemain pour cgarger les vues
